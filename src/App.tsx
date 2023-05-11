@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Suspense, useEffect, useState } from 'react';
+import { TodoList } from './components/TodoList';
+
 import './App.css';
+import { InputField } from './components/InputField';
+import { useAppDispatch, useAppSelector } from './hook';
+import { addNewTodo, fetchTodos } from './store/todoSlice';
 
 function App() {
+  const dispatch = useAppDispatch();
+
+  const [text, setText] = useState('')
+  const {status, error} = useAppSelector((state) => state.todos)
+  
+  const addTask = () => {
+    dispatch(addNewTodo(text));
+    setText('');
+  }
+
+  useEffect(() => {
+      dispatch(fetchTodos())
+  }, [dispatch])
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <InputField handleSubmit={addTask} setText={setText}  text={text}/>
+      {status === 'loading' && <h2>Loading...</h2>}
+      {error && <h2>An error occured: {error}</h2>}
+      <Suspense fallback={<h2>Loading todo list</h2>}>
+      <TodoList />
+
+      </Suspense>
     </div>
   );
 }
