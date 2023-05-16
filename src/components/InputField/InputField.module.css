@@ -1,0 +1,19 @@
+.input_wrapper {
+   display: inline-flex;
+   width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px 5px;
+    font-size: 18px;
+  }
+  
+  .input:active {
+    border-color: blueviolet;
+  }
+
+  input:checked + span {
+    text-decoration: line-through;
+  }

@@ -1,0 +1,19 @@
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+  
+  }
+  
+  .btn_color {
+    background-color: blueviolet;
+    color: aliceblue;
+    font-weight: 700;
+  }
+
+  .btn:hover {
+    background-color: darkorchid;
+  }
