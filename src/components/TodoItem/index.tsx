@@ -1,6 +1,8 @@
 import React from 'react'
-import { useAppDispatch } from '../hook';
-import { deleteTodo, toggleStatus } from '../store/todoSlice';
+import { useAppDispatch } from '../../hook';
+import { deleteTodo, toggleStatus } from '../../store/todoSlice';
+import styles from './TodoItem.module.css';
+
 interface ItodoItemProps {
     id: string,
     title: string,
@@ -19,7 +21,7 @@ export const TodoItem: React.FC<ItodoItemProps> = ({id, completed, title}) => {
   }
 
   return (
-    <li key={id}>
+    <li className={styles.list_item} key={id}>
         <input type="checkbox" checked={completed} 
         onChange={handleTodoComplete}
         />

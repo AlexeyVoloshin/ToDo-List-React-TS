@@ -1,0 +1,10 @@
+.header {
+    width: 100%;
+    background-color: blueviolet;
+  }
+  
+  .header_title {
+    color: aliceblue;
+    text-align: center;
+    display: inline-block;
+  }
