@@ -8,3 +8,8 @@ export interface ITodoItem {
     title: string,
     completed: boolean,
 }
+
+export enum ThemeState {
+    light = 'light',
+    dark = 'dark',
+}
