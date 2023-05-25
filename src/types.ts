@@ -13,3 +13,9 @@ export enum ThemeState {
     light = 'light',
     dark = 'dark',
 }
+
+export enum FilterState {
+    all = 'all',
+    completed = 'completed',
+    active = 'active'
+}

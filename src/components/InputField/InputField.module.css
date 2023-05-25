@@ -17,3 +17,8 @@
   input:checked + span {
     text-decoration: line-through;
   }
+
+  .activeThemeLight {
+    box-shadow: 0 0 0 2px #999;
+    border-radius: 5px;
+  }

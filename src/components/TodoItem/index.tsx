@@ -21,14 +21,16 @@ export const TodoItem: React.FC<ItodoItemProps> = ({id, completed, title}) => {
   }
 
   return (
-    <li className={styles.list_item} key={id}>
-        <input type="checkbox" checked={completed} 
+    <label htmlFor={`listItem-${id}`}>
+      <li className={styles.list_item}>
+        <input id={`listItem-${id}`} type="checkbox" checked={completed} 
         onChange={handleTodoComplete}
         />
         <span>{title}</span>
-        <span className='delete' 
+        <span className={styles.delete} 
         onClick={handleRemoveTodo}
         >&times;</span>
-    </li>
+      </li>
+    </label>
   )
 }

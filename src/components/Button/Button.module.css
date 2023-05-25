@@ -5,7 +5,11 @@
     border: none;
     cursor: pointer;
     font-size: 20px;
-  
+    border-radius: 5px;
+    box-shadow: 0 9px 4px 0px #000;
+    position: relative;
+    top: 0;
+    transition: all linear 0.1s;
   }
   
   .btn_color {
@@ -16,4 +20,10 @@
 
   .btn:hover {
     background-color: darkorchid;
+  }
+
+  .btn:active {
+    position: relative;
+    top: 4px;
+    box-shadow: 0 6px 4px 0px #000;
   }

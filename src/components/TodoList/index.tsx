@@ -3,11 +3,10 @@ import { ITodoItem } from '../../types';
 import { TodoItem } from "../TodoItem";
 import { useAppSelector } from "../../hook";
 import styles from './TodoList.module.css';
+import {  selectTodosByFilter } from '../../store/selectors';
 
 export const TodoList: React.FC = () => {
-    const todoList = useAppSelector((state) => state.todos.list)
-  console.log('todoList: ',todoList);
-  
+    const todoList = useAppSelector(selectTodosByFilter)
     return (
         <ul className={styles.todoList}>
             {
