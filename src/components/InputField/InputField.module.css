@@ -2,23 +2,23 @@
    display: inline-flex;
    width: 100%;
     margin-bottom: 20px;
-  }
+}
   
-  .input {
-    width: 100%;
-    padding: 10px 5px;
-    font-size: 18px;
-  }
+.input {
+  width: 100%;
+  padding: 10px 5px;
+  font-size: 18px;
+}
   
-  .input:active {
-    border-color: blueviolet;
-  }
+.input:active {
+  border-color: blueviolet;
+}
 
-  input:checked + span {
-    text-decoration: line-through;
-  }
+input:checked + span {
+  text-decoration: line-through;
+}
 
-  .activeThemeLight {
-    box-shadow: 0 0 0 2px #999;
-    border-radius: 5px;
-  }
+.activeThemeLight {
+  box-shadow: 0 0 0 2px #999;
+  border-radius: 5px;
+}
